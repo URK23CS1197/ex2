@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARENTS MEETING FORM</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        h3{
+            font-size: large;
+            font-style: italic;
+            text-align: center;
+        }
+        .column{
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 380px;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+}
+        textarea{
+            text-align: center;
+        }
+        h1{
+            font-size: larger;
+            font-style: italic;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body style="background-color: oldlace;">
+    <h1 style="font-style: italic; text-align: center;" class="row"> <b>PARENTS MEETING FORM</b></h1>
+    <div >
+        <div class="column" style="background-color: lightblue;">
+            <h3><b>STUDENT DETAILS</b></h3>
+            <form action="/server.php">
+                <label for="fname">Student name:</label><br>
+                <input type="text" id="fname" name="fname" value="NIRANSON"><br>
+                <label for="std">Standard</label><br>
+                <input type="number" id="std" name="std" ><br>
+                <label for="dob">Student Date of Birth</label><br>
+                <input type="date" id="dob" name="dob"><br>
+                <label for="ema">E-Mail</label><br>
+                <input type="email" id="ema" name="ema"><br>
+                <h4>Select student group</h4>
+                <input type="radio" name="group" id="Bio-Cs" value="Bio-Cs">
+                <label for="Bio-Cs" >BIO-CS</label><br>
+                <input type="radio" name="group" id="Bio-Maths" value="Bio-Maths">
+                <label for="Bio-Maths" >Bio-Maths</label><br>
+                <input type="radio" name="group" id="Maths-Cs" value="Maths-Cs">
+                <label for="Maths-Cs" >Maths-Cs</label><br>
+                <label for="pass">Enter student Password</label><br>
+                <input type="password" id="pass" name="pass" ><br><br>
+                <input type="submit" value="SUBMIT" style="text-align: center;">
+                <input type="reset" value="Reset">
+              </form>
+        </div>
+        <div class="column" style="background-color: lavender;">
+            <h3><b>PARENT DETAILS</b></h3>
+            <form action="/server.php">
+                <label for="pname">Parents Name</label><br>
+                <input type="text" id="pname" name="pname"><br>
+                <label for="num">Enter Phone Number</label><br>
+                <input type="tel" id="num" name="num" ><br>
+                <label for="em">E-Mail</label><br>
+                <input type="email" id="em" name="em" ><br>
+                <h4>Are you father/mother/gaurdian ?</h4>
+                <input type="radio" name="gen" id="father" value="father">
+                <label for="father">Father</label><br>
+                <input type="radio" name="gen" id="mother" value="mother">
+                <label for="mother">mother</label><br>
+                <input type="radio" name="gen" id="gaurdian" value="gaurdian">
+                <label for="gaurdian">gaurdian</label><br>
+                <label for="occu">Choose Your Occupation</label><br>
+                <select name="occu" id="occu">
+                    <option value="Govt Job">Govt Job</option>
+                    <option value="Bussiness">Bussiness</option>
+                    <option value="IT">IT</option>
+                    <option value="House Wife">House wife </option>
+                </select><br><br>
+                <input type="submit" value="SUBMIT" style="text-align: center;">
+                  <input type="reset" value="Reset">
+            </form>
+        </div>
+        <div style="text-align: center;">
+             <h3>ENTER YOUR REVIEWS ABOUT THE METTING</h3>
+            <div>
+            <textarea name="reviws" id="review" rows="30" cols="100" style="font-size: large;">
+            </textarea><br>
+            <form action="/server.php">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form><br><br>
+           
+            <form action="/server.php">
+                    <label for="Search">Search our website to stay update: </label>
+                    <input type="url" id="Search" name="Search" style="font-size: large; font-style: italic;">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+            </form>
+            <h3>Search Your Ward Report</h3>
+            <form action="/server.php">
+                 <label for="rep">Search Report:</label>
+                <input type="search" id="rep" name="rep">
+                <input type="submit" value="Submit">
+
+            </form>
+            <h3>Enter Your Students Marksheet</h3>
+            <form>
+                <label for="mark">Select a file:</label>
+                <input type="file" id="mark" name="mark">
+            </form>
+            <div style="font-size: large;font-style: italic;">
+                <h3>Is your Ward Participating in any Sports</h3>
+            <form>
+                <input type="checkbox" id="Football" name="Football" value="Football">
+                <label for="Football"> Football</label><br>
+                <input type="checkbox" id="BasketBall" name="BasketBall" value="BasketBall">
+                <label for="BasketBall"> BasketBall</label><br>
+                <input type="checkbox" id="Swimming" name="Swimming" value="Swimming">
+                <label for="Swimming"> Swimming</label><br>
+                <input type="checkbox" id="Badmiton" name="Badmiton" value="Badmiton">
+                <label for="Badmiton"> Badmiton</label><br>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+            </div>
+
+        </div>
+        </div>
+        <div style="text-align: center;font-size: large; font-style: italic;">
+            <h3>How much will you rate this Metting</h3>
+            <form action="/server.php">
+                <label for="rate">Rating(between 0 and 10):</label>
+                <input type="range" id="rate" name="rate" min="0" max="10">
+                <input type="submit" value="Submit">
+            </form><br><br><br>
+            <h1>Thank you for Attending!!!</h1>
+        </div>
+    </div>
+    
+</body>
+</html>
